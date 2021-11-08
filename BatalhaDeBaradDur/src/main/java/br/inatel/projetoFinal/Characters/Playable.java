@@ -8,16 +8,27 @@ import java.util.ArrayList;
 public class Playable extends Personagem{
 
     ArrayList<Weapon> armas = new ArrayList<>(2);
-    String nome;
+    private boolean isPlayer;
 
 
-    public Playable(String raca,int HP,String nome) {
-        super(raca, HP);
-        this.nome = nome;
+    public Playable(String nome,String raca,int HP) {
+        super(nome,raca, HP);
+    }
+
+    public boolean isPlayer() {
+        return isPlayer;
+    }
+
+    public void setPlayer(boolean player) {
+        isPlayer = player;
     }
 
     public String getNome() {
         return nome;
+    }
+
+    public boolean getIsPlayer(){
+        return isPlayer;
     }
 
     public void addWeapon(Weapon a){

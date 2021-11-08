@@ -11,7 +11,7 @@ public abstract class Connection {
 
     static final String user = "root";                  // usuário da instância local do servidor
     static final String password = "070400Lucca";    // senha do usuário da instância local do servidor
-    static final String database = "projeto";           // nome do banco de dados a ser utilizado
+    static final String database = "batalha";           // nome do banco de dados a ser utilizado
 
     // string com URL de conexão com servidor
     static final String url = "jdbc:mysql://localhost:3306/" + database + "?useTimezone=true&serverTimezone=UTC&useSSL=false";

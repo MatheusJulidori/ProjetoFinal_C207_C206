@@ -42,9 +42,8 @@ public abstract class Cenarios {
         }
         flag = true;
         System.out.println("De um nome ao seu " + raca + "!");
-
         String nome = sc.nextLine();
-        jogador = new Playable(raca, hp, nome);
+        jogador = new Playable(nome, raca, hp);
         while (flag) {
             System.out.println("Selecione sua arma inicial: ");
             System.out.println("1 - Espada");
@@ -72,7 +71,8 @@ public abstract class Cenarios {
             }
 
         }
-
+        sc.close();
+        jogador.setPlayer(true);
         return jogador;
     }
 
@@ -84,8 +84,6 @@ public abstract class Cenarios {
         System.out.println(".");
         System.out.println(".");
         System.out.println(".");
-        System.out.print("Pressione enter para continuar: ");
-        sc.nextLine();
         System.out.println("De repente, você escuta alguém chamar seu nome");
         System.out.println("Desconhecido: "+jogador.getNome()+"...");
         System.out.println("Desconhecido: "+jogador.getNome()+"!!!");
@@ -128,16 +126,20 @@ public abstract class Cenarios {
             if(decisions == 1) {
                 System.out.println(jogador.getNome() + ": Homens, de pé, nós defendemos nosso posto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
+                    sc.close();
                     return 0;
                 }else{
+                    sc.close();
                     return 1;
                 }
             }
             else{
                 System.out.println(jogador.getNome() + ": Segura as pontas um segundo, eu já volto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
+                    sc.close();
                     return 2;
                 }else{
+                    sc.close();
                     return 3;
                 }
             }
@@ -148,7 +150,7 @@ public abstract class Cenarios {
                     "A aliança com os homens já está enfraquecida, ninguém se ajuda, só estamos juntos para contar números.Eles não confiam em nós e, pra ser bem sincero,\n" +
                     "também não confio nesses mortais imundos,se Sauron tomar a Terra-Média, eles vão se aliar a ele e se corromper ao poder do anel, assim como seus antigos reis");
             System.out.println(jogador.getNome() + ": Nem todos os homens pensam assim.");
-            System.out.println("Enquanto você falava, você percebe um grupo de orcs vindo na direção de seus homens.\n" +
+            System.out.println("Enquanto você falava, você percebe um grupo de orcs vindo na direção do seu pelotão.\n" +
                     "Também ao seu lado, você percebe um homem ferido sendo cercados por dois orcs. Ele te vê e clama por ajuda.");
 
             System.out.print("Selecione sua ação: ");
@@ -159,19 +161,52 @@ public abstract class Cenarios {
             if(decisions == 1) {
                 System.out.println(jogador.getNome() + ": Guerreiros, de pé, nós defendemos nosso posto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
+                    sc.close();
                     return 0;
                 }else{
+                    sc.close();
                     return 1;
                 }
             }
             else{
                 System.out.println(jogador.getNome() + ": Segura as pontas um segundo, eu já volto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
+                    sc.close();
                     return 2;
                 }else{
+                    sc.close();
                     return 3;
                 }
             }
         }
     }
+
+    public static int cenarioFicarEspada(){
+        Scanner sc = new Scanner(System.in);
+        int decisions = 0;
+        sc.close();
+        return 0;
+    }
+
+    public static int cenarioFicarArco(){
+        Scanner sc = new Scanner(System.in);
+        int decisions = 0;
+        sc.close();
+        return 0;
+    }
+
+    public static int cenarioAjudarEspada(){
+        Scanner sc = new Scanner(System.in);
+        int decisions = 0;
+        sc.close();
+        return 0;
+    }
+
+    public static int cenarioAjudarArco(){
+        Scanner sc = new Scanner(System.in);
+        int decisions = 0;
+        sc.close();
+        return 0;
+    }
+
 }

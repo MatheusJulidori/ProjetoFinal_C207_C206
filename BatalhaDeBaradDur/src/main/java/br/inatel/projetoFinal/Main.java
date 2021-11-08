@@ -2,6 +2,7 @@ package br.inatel.projetoFinal;
 
 import br.inatel.projetoFinal.Cenarios.*;
 import br.inatel.projetoFinal.Characters.*;
+import br.inatel.projetoFinal.Database.PlayableDB;
 import br.inatel.projetoFinal.aliancas.Alianca;
 
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Playable jogador = null;
+        PlayableDB playabledb = new PlayableDB();
         Alianca aliancaPrincipal = new Alianca(jogador, "Homem", 4);
         int decisions = 0;
 
@@ -27,8 +29,14 @@ public class Main {
         System.out.println("Primeiramente, vamos criar seu personagem: ");
 
         jogador = Cenarios.criarPersonagem();
+        playabledb.insertPersonagem(jogador);
+
+        jogador.alianca=aliancaPrincipal;
+        aliancaPrincipal.setRaca(jogador.getRaca());
 
         decisions = Cenarios.cenarioPrincipal(jogador);
+
+
         switch (decisions) {
             case 0:
                 System.out.println("Ficar com espada, montar depois");
