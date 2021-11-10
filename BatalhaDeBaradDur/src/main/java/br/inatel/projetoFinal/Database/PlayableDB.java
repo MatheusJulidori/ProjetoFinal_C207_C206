@@ -5,6 +5,7 @@ import br.inatel.projetoFinal.Characters.Playable;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class PlayableDB extends Connection{
 
@@ -57,9 +58,9 @@ public class PlayableDB extends Connection{
             pst.execute();                           // executa o comando
             check = true;
             if(personagem.getHP() <= 0){
-                sql = "UPDATE person SET isDead=1 WHERE nome=?";
+                String sql2 = "UPDATE person SET isDead=1 WHERE nome=?";
                 try{
-                    pst = connection.prepareStatement(sql);
+                    pst = connection.prepareStatement(sql2);
                     pst.setString(1, personagem.getNome());
                     pst.execute();
                 }catch (SQLException e) {
@@ -108,6 +109,33 @@ public class PlayableDB extends Connection{
             }
         }
         return playables;
+    }
+
+    public Playable buscarPlayableEspecifico(String nome){
+        connect();
+        Playable p = null;
+        String sql = "SELECT * FROM person WHERE nome = ?";
+        try{
+            pst = connection.prepareStatement(sql);
+            pst.setString(1,nome);
+            result = pst.executeQuery(sql);
+            while(result.next()){
+                p = new Playable(result.getString("nome"),result.getString("raca"),result.getInt("HP") );
+                p.isDead = p.getHP() <= 0;
+                p.setPlayer(result.getInt("isPlayable") == 1);
+            }
+        }catch (SQLException e){
+            System.out.println("Erro de operação: " + e.getMessage());
+        }finally {
+            try {
+                connection.close();
+                statement.close();
+                result.close();
+            }catch (SQLException e){
+                System.out.println("Erro ao fechar a conexão: " + e.getMessage());
+            }
+        }
+        return p;
     }
 
 }

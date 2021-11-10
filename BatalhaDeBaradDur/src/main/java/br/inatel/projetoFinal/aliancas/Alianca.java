@@ -19,7 +19,7 @@ public class Alianca {
 
     public void adicionarAlianca(Alianca aliado){
         this.aliados.add(aliado);
-        //aliado.aliados.add(this);
+        aliado.aliados.add(this);
     }
 
     public Personagem getLider() {
@@ -50,7 +50,4 @@ public class Alianca {
         return aliados;
     }
 
-    public void setAliados(ArrayList<Alianca> aliados) {
-        this.aliados = aliados;
-    }
 }
