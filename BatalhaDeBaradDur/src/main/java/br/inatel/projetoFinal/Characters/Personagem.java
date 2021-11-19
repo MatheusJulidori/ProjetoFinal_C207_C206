@@ -41,6 +41,5 @@ public abstract class Personagem {
         this.nome = nome;
     }
 
-    public abstract void atacar(Personagem p);
 
 }

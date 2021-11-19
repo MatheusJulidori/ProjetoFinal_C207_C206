@@ -138,4 +138,19 @@ public class PlayableDB extends Connection{
         return p;
     }
 
+    public boolean deletePlayable(String nome){
+        connect();
+        String sql = "DELETE FROM PERSON WHERE nome = ?";
+        try{
+            pst = connection.prepareStatement(sql);
+            pst.setString(1,nome);
+            pst.execute();
+            check = true;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            check = false;
+        }
+        return check;
+    }
+
 }

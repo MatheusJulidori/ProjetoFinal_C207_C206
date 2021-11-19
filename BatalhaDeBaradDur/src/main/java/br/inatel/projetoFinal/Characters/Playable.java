@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Playable extends Personagem{
 
-    ArrayList<Weapon> armas = new ArrayList<>(2);
+    private ArrayList<Weapon> armas = new ArrayList<>(2);//Pos 0 =  Arco  Pos 1 = Espada
     private boolean isPlayer;
 
 
@@ -27,27 +27,19 @@ public class Playable extends Personagem{
         return nome;
     }
 
+    public ArrayList<Weapon> getArmas() {
+        return armas;
+    }
+
     public boolean getIsPlayer(){
         return isPlayer;
     }
 
     public void addWeapon(Weapon a){
-        if(armas.isEmpty())
-            armas.add(a);
-        else if(armas.get(1) != null ){
-            if(a instanceof Espada){
-                if(armas.get(1) instanceof Espada){
-                    armas.add(1,a);
-                }else{
-                    armas.add(0,a);
-                }
-            }else{
-                if(armas.get(1) instanceof Espada){
-                    armas.add(0,a);
-                }else{
-                    armas.add(1,a);
-                }
-            }
+        if(a instanceof Espada){
+            armas.add(1,a);
+        }else{
+            armas.add(0,a);
         }
     }
 
@@ -60,8 +52,21 @@ public class Playable extends Personagem{
         }
     }
 
-    @Override
-    public void atacar(Personagem p) {
-
+    public Weapon getArma(int weapon){
+        return armas.get(weapon);
     }
+
+    public void atacar(Personagem p, int weapon,int crit) {//Crit 0 = false 1 = true
+        int oldHP = p.getHP();
+        Weapon a = armas.get(weapon);
+        int newHP;
+        if(crit == 0)
+            newHP = oldHP - a.getDano();
+        else
+            newHP = oldHP - (a.getDano()*3);
+        p.setHP(newHP);
+        if(oldHP <= 0)
+            p.isDead = true;
+    }
+
 }

@@ -2,9 +2,15 @@ package br.inatel.projetoFinal;
 
 import br.inatel.projetoFinal.Cenarios.*;
 import br.inatel.projetoFinal.Characters.*;
+import br.inatel.projetoFinal.Database.AliancaDB;
 import br.inatel.projetoFinal.Database.PlayableDB;
+import br.inatel.projetoFinal.Database.WeaponDB;
+import br.inatel.projetoFinal.Weapons.Arco;
+import br.inatel.projetoFinal.Weapons.Espada;
+import br.inatel.projetoFinal.Weapons.Weapon;
 import br.inatel.projetoFinal.aliancas.Alianca;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -14,6 +20,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Playable jogador = null;
         PlayableDB playabledb = new PlayableDB();
+        WeaponDB weaponDB = new WeaponDB();
+        AliancaDB aliancaDB = new AliancaDB();
         Alianca aliancaPrincipal = new Alianca(jogador, "Homem", 4);
         int decisions = 0;
 
@@ -29,20 +37,27 @@ public class Main {
         System.out.println("Primeiramente, vamos criar seu personagem: ");
 
         jogador = Cenarios.criarPersonagem();
-        playabledb.insertPersonagem(jogador);
-
         jogador.alianca=aliancaPrincipal;
         aliancaPrincipal.setRaca(jogador.getRaca());
+
+        playabledb.insertPersonagem(jogador);
+        for (Weapon w: jogador.getArmas()) {
+            if(w != null){
+                weaponDB.insertWeapon(w,jogador);
+            }
+        }
+        aliancaDB.insertAlianca(aliancaPrincipal);
+
 
         decisions = Cenarios.cenarioPrincipal(jogador);
 
 
         switch (decisions) {
             case 0:
-                System.out.println("Ficar com espada, montar depois");
+                decisions = Cenarios.cenarioAjudarEspada(jogador);
                 break;
             case 1:
-                System.out.println("Ficar com arco, montar depois");
+                decisions = Cenarios.cenarioAjudarArco(jogador);
                 break;
             case 2:
                 System.out.println("Ajudar com espada, montar depois");
@@ -53,6 +68,43 @@ public class Main {
             default:
                 break;
         }
+
+        int numMembrosNovaAlianca;
+        if(decisions == 0){
+            numMembrosNovaAlianca = 3;
+        }else{
+            numMembrosNovaAlianca = 5;
+        }
+
+        Playable elendil = null;
+        Alianca aliancaElendil = null;
+
+        Espada genericSword = new Espada(3,"S");
+        Arco genericArrow = new Arco(3,"L");
+
+        if (Objects.equals(jogador.getRaca(), "Homem")) {
+            elendil = new Playable("Elendil", "Elfo", 20);
+            elendil.addWeapon(genericArrow);
+            aliancaElendil = new Alianca(elendil,"Elfo",numMembrosNovaAlianca);
+        }else{
+            elendil = new Playable("Elendil", "Homem", 20);
+            elendil.addWeapon(genericArrow);
+            aliancaElendil = new Alianca(elendil,"Elfo",numMembrosNovaAlianca);
+        }
+        aliancaPrincipal.adicionarAlianca(aliancaElendil);
+        aliancaElendil.adicionarAlianca(aliancaPrincipal);
+
+        playabledb.insertPersonagem(elendil);
+        for (Weapon w: elendil.getArmas()) {
+            if(w != null){
+                weaponDB.insertWeapon(w,elendil);
+            }
+        }
+        aliancaDB.insertAlianca(aliancaElendil);
+        aliancaDB.updateAliados(aliancaPrincipal);
+
+        //Cenario unico, final, quase td mnd morre, isildur corta anel
+        // sobra vc elendil, buscar aliancas, atualizar aliancas, deletar aliancas depois da despedida
     }
 
 }
