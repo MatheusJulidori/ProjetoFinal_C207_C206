@@ -48,6 +48,32 @@ public class AliancaDB extends Connection{
         return check;
     }
 
+    // ----------------------------ATUALIZANDO NUMERO DE MEMBROS DE UMA ALIANÇA----------------------------
+    public boolean updateAlianca(Alianca alianca,int numMembro){
+        connect();
+        String sql = "UPDATE alliance SET numMembros = ? WHERE lider = ?";
+        try {
+            pst = connection.prepareStatement(sql);
+            pst.setInt(1, numMembro);
+            pst.setString(2, alianca.getLider().getNome());
+            pst.execute();                           // executa o comando
+            check = true;
+            //Inserindo na tabela de aliados
+        }catch (SQLException e) {
+            System.out.println("Erro ao criar alianca: " + e.getMessage());
+            check = false;
+        }
+        finally {
+            try{
+                connection.close();
+                pst.close();
+            }catch (SQLException e){
+                System.out.println("Erro ao fechar a conexão: " + e.getMessage());
+            }
+        }
+        return check;
+    }
+
     // ----------------------------ATUALIZANDO ALIADOS DE UMA ALIANÇA----------------------------
 
     public boolean updateAliados(Alianca alianca){
@@ -145,5 +171,30 @@ public class AliancaDB extends Connection{
         }
         return aliados;
     }
+    // ----------------------------DELETANDO ALIANÇAS----------------------------
+    public ArrayList<Alianca> deleteAliancas(){
+        connect();
+        ArrayList<Alianca> aliados = new ArrayList<>();
+        String sql = "DELETE FROM alliance WHERE numMembros > 0";
+        try{
+            pst = connection.prepareStatement(sql);
+            result = pst.executeQuery(sql);
+        }catch (SQLException e){
+            System.out.println("Erro de operação: " + e.getMessage());
+        }finally {
+            try {
+                connection.close();
+                statement.close();
+                result.close();
+            }catch (SQLException e){
+                System.out.println("Erro ao fechar a conexão: " + e.getMessage());
+            }
+        }
+        return aliados;
+    }
 
 }
+
+
+
+

@@ -240,29 +240,29 @@ public abstract class Cenarios {
             System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um elfo" +
                     "vem e sua direção e pede para falar com o líder");
             System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
-            System.out.println("Elendil : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
             System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
-            System.out.println("Narrador: Ao olhar, você e Elendil percebem que foram cercados por um exército de incontáveis orcs");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
             System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
-            System.out.println("Elendil : Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
+            System.out.println("Elros : Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
             System.out.println("Hador : Que? Esse maluco de orelha pontuda xingou a gente?");
-            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha pax na morte'.");
+            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha paz na morte'.");
             System.out.println("Hador : Primeiro, onde você aprendeu a falar Quenya? Segundo, que astral baixo pra quem tem que encorajar um grupo de soldados a lutar contra" +
                     "pelo menos 200 orcs");
-            System.out.println("Elendil : Foco na batalha!");
+            System.out.println("Elros : Foco na batalha!");
         }
         else{
             System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, tem um grupo de homens em perigo logo ao lado");
             System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um homem" +
                     "vem e sua direção e pede para falar com o líder");
             System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
-            System.out.println("Elendil : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
             System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
-            System.out.println("Narrador: Ao olhar, você e Elendil percebem que foram cercados por um exército de incontáveis orcs");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
             System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
-            System.out.println("Elendil : Você devia se sentir honrado.");
+            System.out.println("Elros : Você devia se sentir honrado.");
             System.out.println("Hador : Honrado em morrer ao lado de uma raça corrompida por poder e ganância. Não me parece muito coerente");
-            System.out.println("Elendil : Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
+            System.out.println("Elros : Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
@@ -323,29 +323,29 @@ public abstract class Cenarios {
             System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um elfo" +
                     "vem e sua direção e pede para falar com o líder");
             System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
-            System.out.println("Elendil : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
             System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
-            System.out.println("Narrador: Ao olhar, você e Elendil percebem que foram cercados por um exército de incontáveis orcs");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
             System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
-            System.out.println("Elendil : Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
+            System.out.println("Elros : Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
             System.out.println("Hador : Que? Esse maluco de orelha pontuda xingou a gente?");
-            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha pax na morte'.");
+            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha paz na morte'.");
             System.out.println("Hador : Primeiro, onde você aprendeu a falar Quenya? Segundo, que astral baixo pra quem tem que encorajar um grupo de soldados a lutar contra" +
                     "pelo menos 200 orcs");
-            System.out.println("Elendil : Foco na batalha!");
+            System.out.println("Elros : Foco na batalha!");
         }
         else{
             System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, tem um grupo de homens em perigo logo ao lado");
             System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um homem" +
                     "vem e sua direção e pede para falar com o líder");
             System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
-            System.out.println("Elendil : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
             System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
-            System.out.println("Narrador: Ao olhar, você e Elendil percebem que foram cercados por um exército de incontáveis orcs");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
             System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
-            System.out.println("Elendil : Você devia se sentir honrado.");
+            System.out.println("Elros : Você devia se sentir honrado.");
             System.out.println("Hador : Honrado em morrer ao lado de uma raça corrompida por poder e ganância. Não me parece muito coerente");
-            System.out.println("Elendil : Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
+            System.out.println("Elros : Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
@@ -356,14 +356,202 @@ public abstract class Cenarios {
     public static int cenarioAjudarEspada(Playable jogador){
         Scanner sc = new Scanner(System.in);
         int decisions = 0;
+        System.out.println("Narrador: Você deixa seus aliados para ajudar o grupo que está sendo cercado por 4 orcs.\n" +
+                "Durante a batalha, um dos orcs vem em sua direção\n" +
+                "Você saca ua espada e se prepara para batalha.");
+        System.out.println();
+        System.out.println();
+        Playable orc = GenerateRandNPC.generateRandNPC("Orc");
+        pdb.insertPersonagem(orc);
+        System.out.println("Dados do jogador:");
+        System.out.println("HP: " + jogador.getHP());
+        System.out.println("Arma: Espada");
+        System.out.println("Dano da arma: " + jogador.getArma(0).getDano());
+        System.out.println("Dados do Inimigo:");
+        System.out.println("HP: " + orc.getHP());
+        System.out.println("Arma: Espada e porradaria franca");
+        System.out.println("Dano da arma: " + orc.getArma(1).getDano());
+        System.out.println("Narrador: O orc vem pra cima de você ferozmente ");
+        System.out.println("Selecione sua ação: ");
+        System.out.println("1 - Esquivar");
+        System.out.println("2 - Bloquear o ataque");
+        decisions = sc.nextInt();
+        sc.nextLine();
+        if(decisions == 1) {
+            System.out.println("Narrador: Você esquiva do ataque, mas o peso da espada te deixa lento, e o orc acaba atingindo seu ombro\n." +
+                    "Mesmo assim, o orc se desequilibra e cai e você consegue atingi-lo, desprevenido, em um ponto fraco, causando um dano critico");
+            orc.atacar(jogador,1,0);
+            jogador.atacar(orc,1,1);
+            System.out.println("Resultados da batalha: ");
+            System.out.println("HP restante: " + jogador.getHP());
+            pdb.updateHP(orc);
+            pdb.deletePlayable(orc.getNome());
+            pdb.updateHP(jogador);
+        }
+        else{
+            System.out.println("Narrador: Você bloqueia o ataque e o orc se desequilibra e cai. Com toda sua força, você crava a espada no crânio do orc, matando-ô");
+            jogador.atacar(orc,1,1);
+            System.out.println("Resultados da batalha: ");
+            System.out.println("HP restante: " + jogador.getHP());
+            pdb.updateHP(orc);
+            pdb.deletePlayable(orc.getNome());
+        }
+
+        System.out.println("Elros: Você está bem? Não consegui vir te ajudar a tempo, mas deu pra ver que você deu conta do recado.");
+
+        if(Objects.equals(jogador.getRaca(), "Homem")) {
+            System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, meus homens precisam de ajuda");
+            System.out.println("Narrador: Vocês correm em direção ao seu grupo, mas não chega a tempo de salvar todos. Ao chegarem, Hador" +
+                    "vem e sua direção");
+            System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
+            System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
+            System.out.println("Elros : Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
+            System.out.println("Hador : Que? Esse maluco de orelha pontuda xingou a gente?");
+            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha paz na morte'.");
+            System.out.println("Hador : Primeiro, onde você aprendeu a falar Quenya? Segundo, que astral baixo pra quem tem que encorajar um grupo de soldados a lutar contra" +
+                    "pelo menos 200 orcs");
+            System.out.println("Elros : Foco na batalha!");
+        }
+        else{
+            System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, tem um grupo de homens em perigo logo ao lado");
+            System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um homem" +
+                    "vem e sua direção e pede para falar com o líder");
+            System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
+            System.out.println("Elros : Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Hador : Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
+            System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
+            System.out.println("Elros : Você devia se sentir honrado.");
+            System.out.println("Hador : Honrado em morrer ao lado de uma raça corrompida por poder e ganância. Não me parece muito coerente");
+            System.out.println("Elros : Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
+            System.out.println(jogador.getNome() + ": Foco na batalha!");
+        }
+
         sc.close();
-        return 0;
+        return 1;
     }
 
     public static int cenarioAjudarArco(Playable jogador){
         Scanner sc = new Scanner(System.in);
         int decisions = 0;
+        System.out.println("Narrador: Você deixa seus aliados para ajudar o grupo que está sendo cercado por 4 orcs.\n" +
+                "Durante a batalha, um dos orcs vem em sua direção\n" +
+                "Você saca ua espada e se prepara para batalha.");
+        System.out.println();
+        System.out.println();
+        Playable orc = GenerateRandNPC.generateRandNPC("Orc");
+        pdb.insertPersonagem(orc);
+        System.out.println("Dados do jogador:");
+        System.out.println("HP: " + jogador.getHP());
+        System.out.println("Arma: Espada");
+        System.out.println("Dano da arma: " + jogador.getArma(0).getDano());
+        System.out.println("Dados do Inimigo:");
+        System.out.println("HP: " + orc.getHP());
+        System.out.println("Arma: Espada e porradaria franca");
+        System.out.println("Dano da arma: " + orc.getArma(1).getDano());
+        System.out.println("Narrador: O orc vem pra cima de você ferozmente ");
+        System.out.println("Selecione sua ação: ");
+        System.out.println("1 - Esquivar");
+        System.out.println("2 - Bloquear o ataque");
+        decisions = sc.nextInt();
+        sc.nextLine();
+        if(decisions == 1) {
+            System.out.println("Narrador: Você esquiva do ataque com maestria e agilidade e o orc acaba atingindo o solo\n." +
+                    "Aproveitando o momento, você dispara uma flecha na cabeça do orc desprevenido, matando-ô");
+            jogador.atacar(orc,1,1);
+            System.out.println("Resultados da batalha: ");
+            System.out.println("HP restante: " + jogador.getHP());
+            pdb.updateHP(orc);
+            pdb.deletePlayable(orc.getNome());
+        }
+        else{
+            System.out.println("Narrador: Você bloqueia o ataque com seu arco com o braço de sua armadura, mas a força do impacto é tão grande que você sente seu ombro deslocar.\n" +
+                    " Mesmo assim, você rapidamente chuta o orc, que se desequilibra e cai. Com o braço que lhe resta, você crava uma flecha no crânio do orc, matando-ô. Após mata-lô, você coloca seu ombro no lugar" +
+                    "e se prepara para mais uma batalha");
+            orc.atacar(jogador,1,0);
+            jogador.atacar(orc,1,1);
+            System.out.println("Resultados da batalha: ");
+            System.out.println("HP restante: " + jogador.getHP());
+            pdb.updateHP(orc);
+            pdb.updateHP(jogador);
+            pdb.deletePlayable(orc.getNome());
+        }
+
+        System.out.println("Elros: Você está bem? Não consegui vir te ajudar a tempo, mas deu pra ver que você deu conta do recado.");
+
+        if(Objects.equals(jogador.getRaca(), "Homem")) {
+            System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, meus homens precisam de ajuda");
+            System.out.println("Narrador: Vocês correm em direção ao seu grupo, mas não chega a tempo de salvar todos. Ao chegarem, Hador" +
+                    "vem e sua direção");
+            System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
+            System.out.println("Elros: Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Hador: Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
+            System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
+            System.out.println("Elros: Você devia se sentir honrado. Nai yaryuvalyë estë sambassë Mandosto");
+            System.out.println("Hador: Que? Esse maluco de orelha pontuda xingou a gente?");
+            System.out.println(jogador.getNome() + ": Não, ele disse 'Que você tenha paz na morte'.");
+            System.out.println("Hador: Primeiro, onde você aprendeu a falar Quenya? Segundo, que astral baixo pra quem tem que encorajar um grupo de soldados a lutar contra" +
+                    "pelo menos 200 orcs");
+            System.out.println("Elros: Foco na batalha!");
+        }
+        else{
+            System.out.println(jogador.getNome() + ": Depois nos preocupamos com isso, tem um grupo de homens em perigo logo ao lado");
+            System.out.println("Narrador: Vocês correm em direção ao grupo, mas não chegam a tempo de salvar todos. Ao chegarem, um homem" +
+                    "vem e sua direção e pede para falar com o líder");
+            System.out.println(jogador.getNome() + ": Perdão, não conseguimos chegar a tempo");
+            System.out.println("Elros: Não é hora de se preocupar com isso, estamos em meio a uma guerra. Tivemos sorte de ter poucas baixas.");
+            System.out.println("Hador: Desculpa interromper vossa senhoria(com ironia), mas eu acho que vale a pena vocês darem uma olhada em volta");
+            System.out.println("Narrador: Ao olhar, você e Elros percebem que foram cercados por um exército de incontáveis orcs, e Sauron estava no topo da montanha, comandando todos.");
+            System.out.println(jogador.getNome() + ": É, parece que vou morrer lutando ao lado de um elfo");
+            System.out.println("Elros: Você devia se sentir honrado.");
+            System.out.println("Hador: Honrado em morrer ao lado de uma raça corrompida por poder e ganância. Não me parece muito coerente");
+            System.out.println("Elros: Ai o orelha pontuda, se você quiser morrer mais cedo é só falar, to doidinho pra espetar um otário");
+            System.out.println(jogador.getNome() + ": Foco na batalha!");
+        }
+
         sc.close();
+        return 1;
+    }
+
+    public static int cenarioFinal(Playable jogador){
+        Scanner sc = new Scanner(System.in);
+        int decisions = 0;
+        System.out.println("Narrador: Você e Elros comandam seus aliados em um batalha feroz contra os orcs. Mas eles são muitos. Outros homens e elfos que estão por perto se juntam,\n" +
+                "mas mesmo assim não é o suficiente. Um a um você ve seus aliados morrendo.");
+        System.out.println("Distraido pela cena, você é atingido por um orc e derruba sua arma. Ao olhar para o lado, você percebe que Hador está no chão, com uma espada cravada no peito.\n");
+        System.out.println("Isso te enche de fúria, e você pega uma espada no chão e começa a brandir ela com tal força que todos os orcs perto se assutam e recuam. Ao chegar até Hador,\n" +
+                "ele te olha nos olhos e diz com seus últimos suspiros:");
+        System.out.println("Hador: Parece que você realmente é mais forte do que eu afinal de contas... Não deixe minha morte ser em vão irmão, honre minha vida e minha morte. Morra, mas morra lutando.");
+        System.out.println("Narrador: Hador fecha os olhos e para de respirar. Em prantos, você se levanta, disposto a cumprir sua promessa. Você olha ao lado e vê homens e elfos amedrontados,\n" +
+                "desesperados com a batalha, com medo da morte. Com o resto da força que lhe resta, você pega uma espada, sobe em uma pedra, ergue o braço e grita:");
+        if(Objects.equals(jogador.getRaca(), "Homem")) {
+            System.out.println(jogador.getNome() + ": Levantem-se, levantem-se, Guerreiros de Elendil! Lanças serão brandidas, escudos serão quebrados. Um dia de luta,de espadas, um dia vermelho!\n" +
+                    "Antes que o sol nasça, lutem! Marchem em direção a morte! Pela honra de nossas terras e amigos! PELA MORTE!");
+            System.out.println("Multidão: MORTE!!!! MORTEEE!!!!!!");
+            System.out.println(jogador.getNome() + ": PELA MORTEEEE!");
+        }else{
+            System.out.println(jogador.getNome() + ": Levantem-se, levantem-se, Guerreiros de Gil-galad! Lanças serão brandidas, escudos serão quebrados. Um dia de luta,de arcos e flechas, um dia vermelho!\n" +
+                    "Antes que o sol nasça, lutem! Marchem em direção a morte! Pela honra de nossas terras e amigos! PELA MORTE!");
+            System.out.println("Multidão: MORTE!!!! MORTEEE!!!!!!");
+            System.out.println(jogador.getNome() + ": PELA MORTEEEE!");
+        }
+        System.out.println("Narrador: Você e Elros comandam seus aliados em uma última batalha, em direção a morte. A fúria e inspiração nos corações dos guerreiros lhe dão uma força que\n" +
+                "asussta os orcs. Homens e elfos perfurados por espadas e flechas, com braços dilacerados e pernas quebras, usam suas últimas forças para dizimar a maior quantidade de orcs.");
+        System.out.println("Narrador: Mas mesmo assim, os orcs eram muitos. Pouco a pouco todos foram morrendo. Mas morriam com orgulho e honra, felizes pela luta. O cansaço te atinge e você cai ao solo.\n" +
+                "Aceitando sua morte, você olha em volta. Elros também está no seu final, e os homens e elfos que restaram foram poucos.");
+        System.out.println("Narrador: Quando você enfim aceitará a sua morte, você vê um clarão na distância e um grito de dor. Isildur havia cortado o anel do dedo de Sauron. O um Anel,\n" +
+                "que mantinha a essência de Sauron no corpo físico, havia sido cortado. Logo em seguida, o clarão se aumenta e o corpo físico do Senhor das Trevas se desintegra em uma explosão\n" +
+                "de luz e força, derrubando todos e fazendo com que todos os orcs recuassem com medo.");
+        System.out.println("Narrador: O cerco de Barad-Dur cherá ao fim, e A Última Aliança saiu vitoriosa.");
+        System.out.println("Narrador: Você se levanta e olha para Elros. Ele se despede, sinalizando assim o fim da aliança entre Homens e Elfos");
+        System.out.println("Narrador: Após essa batalha, os elfos se retiraram para os Portos Cinzentos e navegaram em direção a Valinor, a Terra dos Imortais, para viver em meio aos Valar.\n" +
+                "Já os homens, continuaram a construir seu império juntamente aos Anões e aos poucos Elfos que restaram na Terra Média. Isildur se recusou a destruir o Um Anel, e o perdeu quando\n" +
+                "foi morto. Ele permaneceu perdido por mais de 2000 anos, até que dois hobbits, criaturas pequenas e simpáticas, mas com uma enorme força espiritual e pacífica, chamados Deagle e Smeagle\n" +
+                " encontraram o Um Anel, dando início as aventuras contadas em O Hobbit e na trilogia Senhor dos Anéis. ");
         return 0;
     }
 

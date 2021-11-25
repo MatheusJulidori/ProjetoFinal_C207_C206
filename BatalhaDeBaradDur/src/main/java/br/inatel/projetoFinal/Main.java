@@ -60,10 +60,10 @@ public class Main {
                 decisions = Cenarios.cenarioAjudarArco(jogador);
                 break;
             case 2:
-                System.out.println("Ajudar com espada, montar depois");
+                decisions = Cenarios.cenarioFicarEspada(jogador);
                 break;
             case 3:
-                System.out.println("Ajudar com arco, montar depois");
+                decisions = Cenarios.cenarioFicarArco(jogador);
                 break;
             default:
                 break;
@@ -74,37 +74,40 @@ public class Main {
             numMembrosNovaAlianca = 3;
         }else{
             numMembrosNovaAlianca = 5;
+            aliancaPrincipal.setNumMembros(3);
         }
 
-        Playable elendil = null;
-        Alianca aliancaElendil = null;
+        Playable elros = null;
+        Alianca aliancaElros = null;
 
         Espada genericSword = new Espada(3,"S");
         Arco genericArrow = new Arco(3,"L");
 
         if (Objects.equals(jogador.getRaca(), "Homem")) {
-            elendil = new Playable("Elendil", "Elfo", 20);
-            elendil.addWeapon(genericArrow);
-            aliancaElendil = new Alianca(elendil,"Elfo",numMembrosNovaAlianca);
+            elros = new Playable("Elros", "Elfo", 20);
+            elros.addWeapon(genericArrow);
+            aliancaElros = new Alianca(elros,"Elfo",numMembrosNovaAlianca);
         }else{
-            elendil = new Playable("Elendil", "Homem", 20);
-            elendil.addWeapon(genericArrow);
-            aliancaElendil = new Alianca(elendil,"Elfo",numMembrosNovaAlianca);
+            elros = new Playable("Elros", "Homem", 20);
+            elros.addWeapon(genericSword);
+            aliancaElros = new Alianca(elros,"Elfo",numMembrosNovaAlianca);
         }
-        aliancaPrincipal.adicionarAlianca(aliancaElendil);
-        aliancaElendil.adicionarAlianca(aliancaPrincipal);
+        aliancaPrincipal.adicionarAlianca(aliancaElros);
+        aliancaElros.adicionarAlianca(aliancaPrincipal);
 
-        playabledb.insertPersonagem(elendil);
-        for (Weapon w: elendil.getArmas()) {
+        playabledb.insertPersonagem(elros);
+        for (Weapon w: elros.getArmas()) {
             if(w != null){
-                weaponDB.insertWeapon(w,elendil);
+                weaponDB.insertWeapon(w,elros);
             }
         }
-        aliancaDB.insertAlianca(aliancaElendil);
+        aliancaDB.insertAlianca(aliancaElros);
         aliancaDB.updateAliados(aliancaPrincipal);
+        aliancaDB.updateAlianca(aliancaPrincipal,aliancaPrincipal.getNumMembros());
 
-        //Cenario unico, final, quase td mnd morre, isildur corta anel
-        // sobra vc elendil, buscar aliancas, atualizar aliancas, deletar aliancas depois da despedida
+        aliancaDB.deleteAliancas();
+
+        System.out.println("Fim do prólogo! Jogo ainda em desenvolvimento! Para saber mais das histórias da Terra Média, leia a coleção de livros de JRR Tolkien.");
     }
 
 }
