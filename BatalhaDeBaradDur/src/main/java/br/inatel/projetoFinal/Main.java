@@ -17,7 +17,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
         Playable jogador = null;
         PlayableDB playabledb = new PlayableDB();
         WeaponDB weaponDB = new WeaponDB();
@@ -39,6 +38,7 @@ public class Main {
         jogador = Cenarios.criarPersonagem();
         jogador.alianca=aliancaPrincipal;
         aliancaPrincipal.setRaca(jogador.getRaca());
+        aliancaPrincipal.setLider(jogador);
 
         playabledb.insertPersonagem(jogador);
         for (Weapon w: jogador.getArmas()) {
@@ -93,7 +93,7 @@ public class Main {
             aliancaElros = new Alianca(elros,"Elfo",numMembrosNovaAlianca);
         }
         aliancaPrincipal.adicionarAlianca(aliancaElros);
-        aliancaElros.adicionarAlianca(aliancaPrincipal);
+        //aliancaElros.adicionarAlianca(aliancaPrincipal);
 
         playabledb.insertPersonagem(elros);
         for (Weapon w: elros.getArmas()) {
@@ -105,7 +105,7 @@ public class Main {
         aliancaDB.updateAliados(aliancaPrincipal);
         aliancaDB.updateAlianca(aliancaPrincipal,aliancaPrincipal.getNumMembros());
 
-        aliancaDB.deleteAliancas();
+        Cenarios.cenarioFinal(jogador);
 
         System.out.println("Fim do prólogo! Jogo ainda em desenvolvimento! Para saber mais das histórias da Terra Média, leia a coleção de livros de JRR Tolkien.");
     }

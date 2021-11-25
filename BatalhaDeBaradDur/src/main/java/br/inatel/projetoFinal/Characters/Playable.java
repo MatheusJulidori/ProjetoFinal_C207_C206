@@ -2,17 +2,20 @@ package br.inatel.projetoFinal.Characters;
 
 import br.inatel.projetoFinal.Weapons.Espada;
 import br.inatel.projetoFinal.Weapons.Weapon;
+import br.inatel.projetoFinal.Weapons.WeaponNull;
 
 import java.util.ArrayList;
 
 public class Playable extends Personagem{
 
-    private ArrayList<Weapon> armas = new ArrayList<>(2);//Pos 0 =  Arco  Pos 1 = Espada
+    private ArrayList<Weapon> armas;//Pos 0 =  Arco  Pos 1 = Espada
     private boolean isPlayer;
 
 
     public Playable(String nome,String raca,int HP) {
         super(nome,raca, HP);
+        armas = new ArrayList<>();
+        armas.add(new WeaponNull(0,"0"));
     }
 
     public boolean isPlayer() {

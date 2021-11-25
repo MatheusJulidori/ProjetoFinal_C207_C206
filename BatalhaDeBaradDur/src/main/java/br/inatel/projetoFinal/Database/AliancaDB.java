@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class AliancaDB extends Connection{
 
-    // ----------------------------CRIANDO PERSONAGEM PLAYABLE----------------------------
+    // ----------------------------CRIANDO ALIANÇA----------------------------
     public boolean insertAlianca(Alianca alianca){
         connect();
         String sql = "INSERT INTO alliance(lider, numMembros, raca) VALUES(?, ?, ?)";
@@ -21,18 +21,6 @@ public class AliancaDB extends Connection{
             pst.execute();                           // executa o comando
             check = true;
             //Inserindo na tabela de aliados
-            try{
-                for(Alianca a:alianca.getAliados()) {
-                    String sql2 = "INSERT INTO allys(alianca_lider, alianca_lider1) VALUES(?, ?)";
-                    pst = connection.prepareStatement(sql2);
-                    pst.setString(1, alianca.getLider().getNome());
-                    pst.setString(2, a.getLider().getNome());
-                    pst.execute();
-                }
-            }catch (SQLException e) {
-                System.out.println("Erro ao criar alianca: " + e.getMessage());
-                check = false;
-            }
         } catch (SQLException e) {
             System.out.println("Erro ao criar alianca: " + e.getMessage());
             check = false;
@@ -175,10 +163,10 @@ public class AliancaDB extends Connection{
     public ArrayList<Alianca> deleteAliancas(){
         connect();
         ArrayList<Alianca> aliados = new ArrayList<>();
-        String sql = "DELETE FROM alliance WHERE numMembros > 0";
+        String sql = "DELETE FROM alliance";
         try{
-            pst = connection.prepareStatement(sql);
-            result = pst.executeQuery(sql);
+            statement = connection.createStatement();
+            result = statement.executeQuery(sql);
         }catch (SQLException e){
             System.out.println("Erro de operação: " + e.getMessage());
         }finally {

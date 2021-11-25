@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `batalha`.`Weapon` (
   CONSTRAINT `fk_Weapon_Character`
     FOREIGN KEY (`Character_nome`)
     REFERENCES `batalha`.`Person` (`nome`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `batalha`.`Alliance` (
   CONSTRAINT `fk_Alianca_Character1`
     FOREIGN KEY (`lider`)
     REFERENCES `batalha`.`Person` (`nome`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
@@ -86,12 +86,12 @@ CREATE TABLE IF NOT EXISTS `batalha`.`Allys` (
   CONSTRAINT `fk_Alianca_has_Alianca_Alianca1`
     FOREIGN KEY (`Alianca_lider`)
     REFERENCES `batalha`.`Alliance` (`lider`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_Alianca_has_Alianca_Alianca2`
     FOREIGN KEY (`Alianca_lider1`)
     REFERENCES `batalha`.`Alliance` (`lider`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 

@@ -16,12 +16,11 @@ public abstract class Cenarios {
     private static PlayableDB pdb = new PlayableDB();
     private static WeaponDB wdb = new WeaponDB();
     private static AliancaDB adb = new AliancaDB();
+    private static Scanner sc = new Scanner(System.in);
 
     public static Playable criarPersonagem() {
         boolean flag = true;
-        Scanner sc = new Scanner(System.in);
-        String classe = null;
-        Playable jogador = null;
+        Playable jogador;
         int hp = 20;
         String raca = null;
         while (flag) {
@@ -79,13 +78,12 @@ public abstract class Cenarios {
             }
 
         }
-        sc.close();
+        //sc.close();
         jogador.setPlayer(true);
         return jogador;
     }
 
     public static int cenarioPrincipal(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
 
         System.out.println("Tudo está escuro, embaçado... Você escuta vozes, gritos e um incessável barulho de metal batendo, mas logo tudo se esvai...");
@@ -105,7 +103,6 @@ public abstract class Cenarios {
         System.out.println("1 - Finalmente você admitiu que sou melhor que você.");
         System.out.println("2 - Certo, me ajude a levantar.");
         decisions = sc.nextInt();
-        sc.nextLine();
         if(decisions == 1) {
             System.out.println(jogador.getNome() + ": Hump! Finalmente você admitiu que sou melhor que você, esse momento vai entrar pra história!");
             System.out.println("Hador: Isso não é hora de fazer piada. Levanta daí");
@@ -126,7 +123,7 @@ public abstract class Cenarios {
             System.out.println("Enquanto você falava, você percebe um grupo de orcs vindo na direção de seus homens.\n" +
                     "Também ao seu lado, você percebe um grupo de elfos feridos sendo cercados por quatro orcs. O líder te vê e clama por ajuda.");
 
-            System.out.print("Selecione sua ação: ");
+            System.out.println("Selecione sua ação: ");
             System.out.println("1 - Manter posição e ajudar seu pelotão");
             System.out.println("2 - Tentar ajudar os elfos");
             decisions = sc.nextInt();
@@ -161,7 +158,7 @@ public abstract class Cenarios {
             System.out.println("Narrador: Enquanto você falava, você percebe um grupo de orcs vindo na direção do seu pelotão.\n" +
                     "Também ao seu lado, você percebe um grupo de homens feridos sendo cercados por quatro orcs. O líder te vê e clama por ajuda.");
 
-            System.out.print("Selecione sua ação: ");
+            System.out.println("Selecione sua ação: ");
             System.out.println("1 - Manter posição e ajudar seu pelotão");
             System.out.println("2 - Tentar ajudar os homens");
             decisions = sc.nextInt();
@@ -169,20 +166,20 @@ public abstract class Cenarios {
             if(decisions == 1) {
                 System.out.println(jogador.getNome() + ": Guerreiros, de pé, nós defendemos nosso posto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
-                    sc.close();
+
                     return 0;
                 }else{
-                    sc.close();
+
                     return 1;
                 }
             }
             else{
                 System.out.println(jogador.getNome() + ": Segura as pontas um segundo, eu já volto!");
                 if(jogador.getArmaType(0) == 1){//Se arma inicial for espada
-                    sc.close();
+
                     return 2;
                 }else{
-                    sc.close();
+;
                     return 3;
                 }
             }
@@ -190,7 +187,6 @@ public abstract class Cenarios {
     }
 
     public static int cenarioFicarEspada(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
         System.out.println("Narrador: Você e seus aliados se preparam para a batalha contra 4 orcs.\n" +
                 "Durante a batalha, você comando seus aliados para derrotar os orcs, até que um deles vem em sua direção\n" +
@@ -266,12 +262,10 @@ public abstract class Cenarios {
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
-        sc.close();
         return 0;
     }
 
     public static int cenarioFicarArco(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
         System.out.println("Narrador: Você e seus aliados se preparam para a batalha contra 4 orcs.\n" +
                 "Durante a batalha, você comando seus aliados para derrotar os orcs, até que um deles vem em sua direção\n" +
@@ -349,12 +343,10 @@ public abstract class Cenarios {
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
-        sc.close();
         return 0;
     }
 
     public static int cenarioAjudarEspada(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
         System.out.println("Narrador: Você deixa seus aliados para ajudar o grupo que está sendo cercado por 4 orcs.\n" +
                 "Durante a batalha, um dos orcs vem em sua direção\n" +
@@ -430,12 +422,10 @@ public abstract class Cenarios {
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
-        sc.close();
         return 1;
     }
 
     public static int cenarioAjudarArco(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
         System.out.println("Narrador: Você deixa seus aliados para ajudar o grupo que está sendo cercado por 4 orcs.\n" +
                 "Durante a batalha, um dos orcs vem em sua direção\n" +
@@ -513,12 +503,10 @@ public abstract class Cenarios {
             System.out.println(jogador.getNome() + ": Foco na batalha!");
         }
 
-        sc.close();
         return 1;
     }
 
     public static int cenarioFinal(Playable jogador){
-        Scanner sc = new Scanner(System.in);
         int decisions = 0;
         System.out.println("Narrador: Você e Elros comandam seus aliados em um batalha feroz contra os orcs. Mas eles são muitos. Outros homens e elfos que estão por perto se juntam,\n" +
                 "mas mesmo assim não é o suficiente. Um a um você ve seus aliados morrendo.");
@@ -552,6 +540,7 @@ public abstract class Cenarios {
                 "Já os homens, continuaram a construir seu império juntamente aos Anões e aos poucos Elfos que restaram na Terra Média. Isildur se recusou a destruir o Um Anel, e o perdeu quando\n" +
                 "foi morto. Ele permaneceu perdido por mais de 2000 anos, até que dois hobbits, criaturas pequenas e simpáticas, mas com uma enorme força espiritual e pacífica, chamados Deagle e Smeagle\n" +
                 " encontraram o Um Anel, dando início as aventuras contadas em O Hobbit e na trilogia Senhor dos Anéis. ");
+        sc.close();
         return 0;
     }
 
